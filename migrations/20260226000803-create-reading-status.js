@@ -12,14 +12,12 @@ module.exports = {
       },
 
       book_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
         references: {
           model: 'Books', 
           key: 'id'
         },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE'
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
 
       status: {
@@ -40,6 +38,12 @@ module.exports = {
 
       notes: {
         type: Sequelize.TEXT
+      },
+      
+        bookId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'Books', key: 'id' },
       },
 
       createdAt: {
