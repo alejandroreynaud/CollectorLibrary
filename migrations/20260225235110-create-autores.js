@@ -15,6 +15,9 @@ module.exports = {
       lastname: {
         type: Sequelize.STRING
       },
+      birthyear: {
+        type: Sequelize.INTEGER
+      },      
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

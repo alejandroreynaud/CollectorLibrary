@@ -1,6 +1,7 @@
 'use strict';
 const {
-  Model
+  Model,
+  ForeignKeyConstraintError
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Autores extends Model {
@@ -11,11 +12,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-    }
+    Autores.hasMany(models.Books, {
+      foreignKey: 'autorId',
+      as: 'Books'
+    });    
+  }
   }
   Autores.init({
     firstName: DataTypes.STRING,
-    lastname: DataTypes.STRING
+    lastname: DataTypes.STRING,
+    birthyear: DataTypes.INTEGER,
+
   }, {
     sequelize,
     modelName: 'Autores',

@@ -1,4 +1,7 @@
 'use strict';
+
+const autores = require('../models/autores');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
 
@@ -11,6 +14,7 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
+        
       },
 
       authorId:{
@@ -25,8 +29,8 @@ module.exports = {
       },
 
       title: {
+        allowNull: false,
         type: Sequelize.STRING,
-        allowNull: false
       },
 
       genre: {
@@ -35,7 +39,6 @@ module.exports = {
 
       isbn: {
         type: Sequelize.STRING,
-        unique: true
       },
 
       page_count: {
@@ -47,6 +50,15 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
+
+      AuthorID:{
+        references: {
+          model: 'Autores', 
+          key: 'id'
+        },
+        type: Sequelize.INTEGER,
+        allowNull: false,
+     },
 
       createdAt: {
         allowNull: false,

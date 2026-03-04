@@ -14,7 +14,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Reading_status.init({
-    status: DataTypes.STRING
+  status: DataTypes.STRING,
+  date_started: DataTypes.DATE,
+  date_finished: DataTypes.STRING,
+  rating: DataTypes.INTEGER,
+  notes: DataTypes.STRING,
+  createAt: DataTypes.DATE,
+  updatedAt: DataTypes.DATE,
+
   }, {
     sequelize,
     modelName: 'Reading_status',
