@@ -13,6 +13,17 @@ module.exports = {
         type: Sequelize.INTEGER
       },
 
+      authorId:{
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Autores', 
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
+      },
+
       title: {
         type: Sequelize.STRING,
         allowNull: false
