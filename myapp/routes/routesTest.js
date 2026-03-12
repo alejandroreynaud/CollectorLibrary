@@ -1,20 +1,5 @@
-/*var routes = require("express").Router();
-
-var routeTestCtrl = require("../controllers/routesTest")
-var testController = require('../controllers/routesTest');
-
-routes.get('/test', routeTestCtrl.getTest);
-
-module.exports = routes
-
-var router = express.Router();
-
-
-module.exports = router;
-*/
-
 var express = require('express');
-var router = express.Router();   
+var router = express.Router();
 
 var testController = require('../controllers/routesTest');
 
