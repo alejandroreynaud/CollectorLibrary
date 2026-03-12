@@ -26,4 +26,5 @@ const swaggerSetup = (app) => {
 }
 
 module.exports = swaggerSetup;
+
 //localhost:3000/api-docs/

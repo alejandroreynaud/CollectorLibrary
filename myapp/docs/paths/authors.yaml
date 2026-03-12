@@ -25,7 +25,7 @@ authors:
               example: "Colombian"
           responses:
           '201':
-          description: Author creado con exito 
+          description: Author creado con exito
           content:
             application/json:
               example:

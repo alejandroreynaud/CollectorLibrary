@@ -12,3 +12,5 @@ servers:
 paths:
   /authors:
     $ref: './paths/authors.yaml/authors'
+    $ref: '/paths/books.yaml/books'
+    
